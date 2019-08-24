@@ -22,7 +22,7 @@ Enough to handle most cases.
 The effect of dropping false-positives is neglectable.
 
 ### For other queries
-Found by Nick. 
+Found by [Nick](https://gitlab.com/NickCao). 
 
 When querying for other records, the GFW's response will contain a CNAME record, which pollutes the cache by bringing in a broken A/AAAA record that accompanies the CNAME.
 
