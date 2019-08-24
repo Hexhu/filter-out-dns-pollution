@@ -1,5 +1,5 @@
-# no-dns-pollution-from-gfw
-Defends DNS pollution by the Great Fire Wall using iptables and [unbounded](https://nlnetlabs.nl/projects/unbound/about/)
+# against-dns-pollution
+Defends DNS pollution by the Great Fire Wall using iptables and [unbound](https://nlnetlabs.nl/projects/unbound/about/)
 
 ### For queries of A records
 Until now, polluted DNS responses have been found to have the following features:
