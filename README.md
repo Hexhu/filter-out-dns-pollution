@@ -17,11 +17,14 @@ sudo iptables -I INPUT -s 8.8.8.8 -p udp --sport 53 -m u32 --u32 "2&0xFFFF=0x0" 
 sudo iptables -I INPUT -s 8.8.8.8 -p udp --sport 53 -m u32 --u32 "4&0xFFFF=0x4000" -j DROP
 ```
 
+Enough to handle most cases.
+
 The effect of dropping false-positives is neglectable.
 
 ### For other queries
 Found by Nick. 
-When querying for other records, the GFW's response will add a CNAME record, which pollutes the cache by bringing in a broken A/AAAA record that accompanies the CNAME.
+
+When querying for other records, the GFW's response will contain a CNAME record, which pollutes the cache by bringing in a broken A/AAAA record that accompanies the CNAME.
 
 Therefore, [unbounded](https://nlnetlabs.nl/projects/unbound/about/) is used here.
 
