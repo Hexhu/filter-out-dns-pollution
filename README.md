@@ -26,7 +26,7 @@ Found by [Nick](https://gitlab.com/NickCao).
 
 When querying for other records, the GFW's response will contain a CNAME record, which pollutes the cache by bringing in a broken A/AAAA record that accompanies the CNAME.
 
-Therefore, [unbounded](https://nlnetlabs.nl/projects/unbound/about/) is used here.
+Therefore, [unbound](https://nlnetlabs.nl/projects/unbound/about/) is used here.
 
 > CNAMEs are chased by unbound itself, asking the remote server for every name in the indirection chain, to protect the local cache from illegal indirect referenced items.
 
